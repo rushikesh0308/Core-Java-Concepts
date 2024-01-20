@@ -1,0 +1,76 @@
+1. What is Jvm ,Jre,Jdk [1]
+	-JVM stands for java virtual machine and it is used to run java program on machine
+	-JRE is java runtime environment consists of JVM and some Library files. eg. jar files
+	-JDK (java development kit) is combination of JRE and development tools like javac.
+
+2. Why java is called as platform independent language?[1]
+	-In java, After compilation source code is converted into byte code.
+	-byte code is nothing but .class file
+	-to run this byte code, we need JRE
+	-byte code runs on any platform where JRE is installed.
+	-Hence Java is platform independent.
+
+3. WAP to take any two numbers from user and swap it without third variable[1]
+
+	import java.util.Scanner;
+	public class SwapNumber{
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	int n1,n2;
+	System.out.println("Enter first number");
+	n1=sc.nextInt();//10
+	System.out.println("Enter second number");
+	n2=sc.nextInt();//5
+	n1=n1+n2;//15
+	n2=n1-n2;//15-5=10
+	n1=n1-n2;//15-10=5
+	System.out.println(n1);//10
+	System.out.println(n2);//5
+}
+}
+4. WAP to take any three numbers and find max number[1]
+	import java.util.Scanner;
+	public class MaxNumber{
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	int n1,n2,n3;
+	System.out.println("Enter first number");
+	n1=sc.nextInt();
+	System.out.println("Enter second number");
+	n2=sc.nextInt();
+	System.out.println("Enter third number");
+	n3=sc.nextInt();
+	if(n1>n2 && n1>n3){
+		System.out.println(n1+" is greater");
+	}else if(n2>n1 && n2>n3){
+		System.out.println(n2+" is greater");
+	}else{
+		System.out.println(n3+" is greater");
+	}
+}
+}
+5. WAP to take number from user and find whether it is divisible 7 or not. If it is not divisible by 
+7 then check which number should in that number ,so that number become divisible by zero
+[1]
+	import java.util.Scanner;
+	public class Divisibility{
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	int num,rem=0;
+	System.out.println("Enter number");
+	num=sc.nextInt();//23
+	if(num%7==0){
+		System.out.println(num+" is divisible by 7");
+	}else{
+		rem=num%7;//23%7=2
+		num=num+(7-rem);//num=23+(7-2)=28
+		System.out.println("We need to add:"+(7-rem));
+	}
+}
+}
+6. Find output[5]
+a-Compile Time Error(int type in if block(boolean required));
+b-GO
+c-Compile Time Error(More than one statement in if block)
+d-UNKNOWN
+e-FOREST

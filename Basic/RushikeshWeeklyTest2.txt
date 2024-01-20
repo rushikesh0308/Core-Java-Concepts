@@ -1,0 +1,109 @@
+1. WAP to Check whether a character is a vowel or consonant using switch statement
+[1]
+
+class CheckCharacter{
+	public static void checkChar(char ch){
+	switch(ch){
+	case 'a':
+	case 'A':
+	case 'e':
+	case 'E':
+	case 'i':
+	case 'I':
+	case 'o':
+	case 'O':
+	case 'u':
+	case 'U':
+		System.out.println("It is vowel");
+		break;
+	default:
+		System.out.println("It is consonant");
+	}
+}
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	char ch;
+	System.out.println("Enter Character");
+	ch=sc.next().charAt(0);
+	checkChar(ch);
+}	
+}
+
+2. WAP to find whether user entered number is prime or not[1]
+class PrimeNumber{
+	public static boolean checkPrime(int num){
+	if(num==0 || num==1){
+		return false;
+	}else{
+		int ct=0,i;
+		for(i=2;i<=num/2;i++){
+			if(num%i==0){
+			ct++;
+			break;
+			}
+		}
+		return ct==0;
+	}
+}
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	int num;
+	System.out.println("Enter number");
+	num=sc.nextInt();
+	if(checkPrime(num))
+	System.out.println(num+" is Prime");
+	else
+	System.out.println(num+" is not Prime");
+}
+}
+
+3. WAP to print whether number is palindrome or not.[1]
+class PalindromeNumber{
+	public static boolean checkPalindrome(int num){
+	int rev=0,temp=num;
+	while(num!=0){
+	int rem=num%10;
+	rev=rev*10+rem;
+	num/=10;
+	}
+	return temp==rev;
+}
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	int num;
+	System.out.println("Enter number");
+	num=sc.nextInt();
+	if(checkPalindrome(num))
+	System.out.println(num+" is Palindrome");
+	else
+	System.out.println(num+" is not Palindrome");
+}
+}
+4. WAP to show use of do..while loop [1]
+class PrintNumbers{
+	public static void main(String[] args){
+		printNum();
+	}
+	public static void printNum(){
+		int i;
+		do{
+			System.out.println(i++);
+		}while(i<5);
+	}
+}
+5. What is difference between for, while and do while [1]
+1.for loop-1.1)we use for loop when we know the iteration
+	1.2)for loop is slower as compaired to while
+2.while loop-2.1)faster as compared to for loop
+	2.2)min no of executions is zero
+	2.3)condition checks first
+3.do while-3.1)it is exit control loop
+	3.2)min no of executions is one
+	3.3)condition checks at last	
+
+6. Find output for following questions [5]
+7. a)5
+b)0
+c)iii)
+d)1 2 3
+e)4 3 2 1
